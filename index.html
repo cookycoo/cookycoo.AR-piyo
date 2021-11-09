@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="UTF-8" />
+  <title>AR DEMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover, shrink-to-fit=no" />
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/3.3.1/aframe/build/aframe-ar-nft.js"></script>
+  <style>
+    * {
+      margin: 0; padding: 0;
+    }
+
+    body {
+      overflow: hidden;
+      cursor: none;
+    }
+  </style>
+</head>
 <body>
   <a-scene embedded arjs="debugUIEnabled: false" vr-mode-ui="enabled: false">
     <a-assets>
       <a-asset-item id="model" src="model.glb"></a-asset-item>
     </a-assets>
     <a-marker type='pattern' url='./pattern-aa.patt'>
-      <a-entity gltf-model="#model"></a-entity>
-      <a-entity>
-      <a-animation attribute="rotation" to="0 360 0" dur="4000" repeat="indefinite"></a-animation>
-      </a-animation>
-      </a-entity>
+
+      <a-entity gltf-model="#model" rotation="0 0 0" position="0 0 0" scale="0.8 0.8 0.8" animation-mixer="clip:*" ></a-entity>
     </a-marker>
+
     <a-entity camera></a-entity>
   </a-scene>
 </body>
