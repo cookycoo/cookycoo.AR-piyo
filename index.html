@@ -24,10 +24,13 @@
     </a-assets>
     <a-marker type='pattern' url='./pattern-aa.patt'>
 
-      <a-entity gltf-model="#model" rotation="0 0 0" scale="0.5 0.5 0.5" animation-mixer="clip:*" ></a-entity>
-<a-entity>
-  <a-animation attribute="position" from="1 1 1" to="2 4 -8"></a-animation>
-</a-entity>
+      <a-entity gltf-model="#model"
+                rotation="0 0 0"
+                scale="0.5 0.5 0.5"
+                attribute="position" from="1 1 1" to="2 4 -8"
+                animation-mixer="clip:*" >
+      </a-entity>
+       
     </a-marker>
 
     <a-entity camera></a-entity>
