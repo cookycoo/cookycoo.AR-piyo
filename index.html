@@ -21,21 +21,15 @@
 <body>
   <a-scene embedded arjs="debugUIEnabled: false" vr-mode-ui="enabled: false">
     <a-assets>
-      <a-asset-item id="model" src="model.glb">
-      <a-asset-item id="piyo" src="piyo.glb">
+      <a-asset-item id="model" src="model.glb"></a-asset-item>
     </a-assets>
     <a-marker type='pattern' url='./pattern-aa.patt'>
       
-    <a-entity scale="0.5 0.5 0.5" rotaion="0 0 0" position="1 1 0" animation-mixer="clip:*"
+    <a-entity scale="0.5 0.5 0.5" rotaion="0 0 0" position="0 1 0" animation-mixer="clip:*"
       gltf-model="#model" visible="true"
       animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 5000; easing: easeInOutQuad; loop: true">
     </a-entity>
-      
-    <a-entity scale="0.5 0.5 0.5" rotaion="0 0 0" position="-1 1 0" animation-mixer="clip:*"
-      gltf-model="#piyo" visible="true"
-      animation="property: rotation; from: 0 0 0; to: 0 360 0; dur: 5000; easing: easeInOutQuad; loop: true">
-    </a-entity>
-      
+       
     </a-marker>
 
     <a-entity camera></a-entity>
